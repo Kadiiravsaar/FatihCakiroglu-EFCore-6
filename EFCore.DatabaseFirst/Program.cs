@@ -9,7 +9,7 @@ using (var _context = new AppDbContext(DbContextInitializer.OptionsBuilder.Optio
 
     products.ForEach(p =>
     {
-        Console.WriteLine($"{p.Id} : {p.Name} {p.Price}");
+        Console.WriteLine($"{p.Id} : {p.Name} {p.Price} {p.Stock}");
     });
    
 
