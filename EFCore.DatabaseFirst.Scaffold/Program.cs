@@ -6,7 +6,7 @@ using (var context = new EfcoreDatabaseFirstDbContext())
     var products = await context.Products.ToListAsync();
     products.ForEach(p =>
     {
-        Console.WriteLine($"{p.Id}-{p.Name}-{p.Price}-{p.Stock}");
+        Console.WriteLine($"{p.Id}-{p.Name}-{p.Price}-{p.Stock} ");
        
     });
 
