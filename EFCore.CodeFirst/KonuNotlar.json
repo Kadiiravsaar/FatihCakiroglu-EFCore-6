@@ -1,0 +1,26 @@
+{
+  // Product sınıfı => Satır 13 => // varsayalım ki yanlışlık yapıp(decimal olanı) int yaptık(manuel)
+
+  // Product sınıfı => Satır 15 => // migration değişikliği için yaptık
+
+  // Initializer sınıfı => Satır 15 => // Appsettings dosyasını okuabilmek için kullandık 
+
+
+
+  // Migration komutları:
+
+  // add-migration DOSYA_ADI => migr. klasörü oluşur ve içinde iki tane dosya oluşur
+  // snapshot adlı klasör o anlık entity propertylerini burda tutar yani
+  // ek migration yapıldığında yeni migration dosyasına ekleip eklenmediğini tutar.
+  // -db de bulunan product tablosu ile burda bulunan product entity'sinin senkron olup olmadığını burdan kontrol ederiz.
+
+
+  // update-database
+  // burda bulunan migr. db'ye yansıtmak için kullanılır
+
+
+  // remove-migrations her zaman son yapılanı(snapshot) siler(db'ye yansıtmadan) ancak değişiklik kalır => KonuNotlar.js de satır 2
+  // varsayalım ki yanlışıkla daha da ileri gittik db'ye yansıttık 
+  //çözüm => örn update-database UpdatePriceForProduct ile bir öncekine dönüp ardından remove yapılır.
+
+}
