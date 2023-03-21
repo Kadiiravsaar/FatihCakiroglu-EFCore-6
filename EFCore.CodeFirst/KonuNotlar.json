@@ -23,4 +23,19 @@
   // varsayalım ki yanlışıkla daha da ileri gittik db'ye yansıttık 
   //çözüm => örn update-database UpdatePriceForProduct ile bir öncekine dönüp ardından remove yapılır.
 
+
+  // Bölüm 4
+
+  // Unchanged => Siz bir listeleme yaptığınızda yani ilk db'den veriyi aldığımızda bu her bir datanın state'ini
+  // değişmemiş(Unchanged) yapar (EFCore dbden ilk datayı okuduğunda verir)
+
+  // Detached => EfCore datayı memory'de Track etmediğinde verir.(bu arkadaş daha memoryde değil)
+
+
+  // ToList() ToListAsync() metotları çağırıldığında tüm datalar EFCore tarafından Track edilir(takip edilir )
+  // eğer update delete gibi işlem yapmayacaksam efcore Tracke etmemesini AsNoTracking ile sağlarım
+  //  NOT : AsNoTracking()  Sql'den gelen data EFCore tarafından tracke edilmemesini sağlamış oluruz (avantajı memoryde tutulmuyor)
+  //
+
+
 }
